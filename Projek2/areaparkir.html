@@ -32,8 +32,8 @@
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       text-align: center;
-      width: 30%;
-      height: 50%;
+      width: 100%;
+      height: 40%;
     }
 
     #example2 button{
@@ -191,7 +191,7 @@
     <section class="content">
       <div class="container-fluid">
           <div class="row">
-              <div class="col-10">
+              <div class="col-12">
                   <div class="card">
                       <!-- /.card-header -->
                       <div class="card-body">
@@ -262,6 +262,10 @@
 <script src="assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!--Data table dan responsive-->
+<script src="assets/js/jquery.dataTables.min.js"></script>
+<script src="assets/js/responsive.bootstrap4.min.js"></script>
+<script src="assets/js/dataTables.responsive.min.js"></script>
 <!-- AdminLTE App -->
 <script src="assets/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
@@ -354,6 +358,19 @@ function resetData(rowNumber) {
   // Panggil kembali fungsi showPopup untuk menampilkan modal pop-up
   showPopup(rowNumber);
 }
+</script>
+<script>
+  $(function () {
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
 </script>
 </body>
 </html>
