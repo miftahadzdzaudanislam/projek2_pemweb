@@ -73,124 +73,154 @@
         </div>
       </nav>
       <!-- /.navbar -->
-      <div class="register-page">
-        <div class="register-box">
-          <div class="card card-outline card-primary">
+      <div class="content-wrapper">
+        <section class="content-header">
+          <!-- /.container-fluid -->
+        </section>
+        <div class="container-fluid">
+          <div class="card card-outline card-primary mx-auto my-5 col-sm-6">
             <div class="card-header text-center">
               <h1><b>SIPAK</b></h1>
             </div>
             <div class="card-body">
-              <p class="login-box-msg">Registrasi User</p>
+              <p class="login-box-msg">Registrasi Kendaraan</p>
 
               <form action="areaparkir.html" method="post">
-                <span class="error" id="errornama"></span>
-                <div class="input-group mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Nama lengkap"
-                    id="nama"
-                    required
-                  />
-                </div>
-                <span class="error mt-0" id="errorasal"></span>
-                <div class="input-group mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Asal prodi"
-                    id="asal"
-                    required
-                  />
-                </div>
-                <span class="error mt-0" id="erroruser"></span>
-                <div class="input-group mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Username"
-                    id="username"
-                    required
-                  />
-                </div>
-                <span class="error mt-0" id="errorpass"></span>
-                <div class="input-group mb-3">
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder="Password"
-                    id="password"
-                    required
-                  />
-                  <div class="input-group-append">
-                    <div class="input-group-text">
-                      <span class="fas fa-lock"></span>
-                    </div>
+                <div class="row form-group">
+                  <div class="col-sm-4">
+                    <label>Status</label>
                   </div>
-                </div>
-                <span class="error mt-0" id="errorcpass"></span>
-                <div class="input-group mb-3">
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder="Cek password"
-                    id="cpassword"
-                    required
-                  />
-                  <div class="input-group-append">
-                    <div class="input-group-text">
-                      <span class="fas fa-lock"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-8">
-                    <div class="icheck-primary">
-                      <input
-                        type="checkbox"
-                        id="agreeTerms"
-                        name="terms"
-                        value="agree"
-                        required
-                      />
-                      <label for="agreeTerms">
-                        saya menyetujui <a href="#">syarat</a>
-                      </label>
-                    </div>
-                  </div>
-                  <!-- /.col -->
-                  <div class="col-4">
-                    <button
-                      type="submit"
-                      class="btn btn-primary btn-block"
-                      onclick="reg()"
+
+                  <div class="custom-control custom-radio col-sm-4">
+                    <input
+                      class="custom-control-input"
+                      type="radio"
+                      id="Mahasiswa"
+                      name="Status"
+                      checked
+                    />
+                    <label for="Mahasiswa" class="custom-control-label"
+                      >Mahasiswa</label
                     >
-                      Register
-                    </button>
                   </div>
-                  <!-- /.col -->
+                  <div class="custom-control custom-radio col-sm-4">
+                    <input
+                      class="custom-control-input"
+                      type="radio"
+                      id="Dosen"
+                      name="Status"
+                    />
+                    <label for="Dosen" class="custom-control-label"
+                      >Dosen</label
+                    >
+                  </div>
                 </div>
+                <span class="error mt-0" id="errorNIM"></span>
+                <div class="form-group">
+                  <label for="NIM">NIM/NIDN</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="NIM"
+                    placeholder="NIM/NIDN"
+                    required
+                  />
+                  <span class="error mt-0" id="errorNIM"></span>
+                </div>
+                <div class="form-group">
+                  <label for="Nama">Nama Lengkap</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="Nama"
+                    placeholder="Nama Lengkap"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Prodi</label>
+                  <select class="custom-select" required>
+                    <option>Teknik Informatika</option>
+                    <option>Sistem Informasi</option>
+                    <option>Bisnis Digital</option>
+                  </select>
+                </div>
+                <div class="row form-group">
+                  <div class="col-sm-4">
+                    <label>Kendaraan</label>
+                  </div>
+
+                  <div class="custom-control custom-radio col-sm-4">
+                    <input
+                      class="custom-control-input"
+                      type="radio"
+                      id="Motor"
+                      name="Kendaraan"
+                      checked
+                    />
+                    <label for="Motor" class="custom-control-label"
+                      >Motor</label
+                    >
+                  </div>
+                  <div class="custom-control custom-radio col-sm-4">
+                    <input
+                      class="custom-control-input"
+                      type="radio"
+                      id="Mobil"
+                      name="Kendaraan"
+                    />
+                    <label for="Mobil" class="custom-control-label"
+                      >Mobil</label
+                    >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="Nopol">NoPol</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="Nopol"
+                    placeholder="NoPol Kendaraan"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="NIM">Merek</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="Merek"
+                    placeholder="Merek Kendaraan"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputFile">Upload STNK</label>
+                  <div class="input-group">
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="file" />
+                      <label class="custom-file-label" for="customFile"
+                        >Choose file</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-block"
+                  onclick="reg()"
+                >
+                  Register
+                </button>
               </form>
-
-              <div class="social-auth-links text-center">
-                <a href="#" class="btn btn-block btn-primary">
-                  <i class="fab fa-facebook mr-2"></i>
-                  Sign up using Facebook
-                </a>
-                <a href="#" class="btn btn-block btn-danger">
-                  <i class="fab fa-google-plus mr-2"></i>
-                  Sign up using Google+
-                </a>
-              </div>
-
-              <a href="login.html" class="text-center"
-                >Saya sudah memiliki membership</a
-              >
             </div>
             <!-- /.form-box -->
           </div>
           <!-- /.card -->
         </div>
+        <section class="content-header">
+          <!-- /.container-fluid -->
+        </section>
       </div>
       <!-- /.register-box -->
 
@@ -224,6 +254,6 @@
     <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="assets/js/adminlte.min.js"></script>
-    <script src="assets/js/register.js"></script>
+    <script src="assets/js/kendaraan.js"></script>
   </body>
 </html>

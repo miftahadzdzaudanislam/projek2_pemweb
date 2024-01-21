@@ -1,119 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIPAK STT-NF</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SIPAK STT-NF</title>
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="assets/css/adminlte.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-</head>
-<body class="hold-transition layout-top-nav">
-  <div class="wrapper">
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="assets/plugins/fontawesome-free/css/all.min.css"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="assets/css/adminlte.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body class="hold-transition layout-top-nav">
+    <div class="wrapper">
+      <!-- Navbar -->
+      <nav
+        class="main-header navbar navbar-expand-md navbar-light navbar-orange sticky-top"
+      >
+        <div class="container">
+          <a href="index.html" class="navbar-brand">
+            <img
+              src="assets/img/SIPAK.png"
+              alt="SIPAK Logo"
+              class="brand-image img-circle elevation-3"
+              style="opacity: 0.8"
+            />
+            <span class="brand-text font-weight-light">SIPAK STT-NF</span>
+          </a>
 
-    <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand-md navbar-light navbar-orange sticky-top">
-      <div class="container">
-        <a href="index.html" class="navbar-brand">
-          <img src="assets/img/SIPAK.png" alt="SIPAK Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-          <span class="brand-text font-weight-light">SIPAK STT-NF</span>
-        </a>
+          <button
+            class="navbar-toggler order-1"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse order-3" id="navbarCollapse">
-          <!-- Left navbar links -->
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#berita" class="nav-link">Berita</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Registrasi Kendaraan</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-primary" href="login.html" role="button">Login</a>
-            </li>
-          </ul>
+          <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#berita" class="nav-link">Berita</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="/kntololic/projek2_pemweb/Projek2/RegisKendaraan.html"
+                  class="nav-link"
+                  >Registrasi Kendaraan</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-primary" href="login.html" role="button"
+                  >Login</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-    <!-- /.navbar -->
+      </nav>
+      <!-- /.navbar -->
 
-    <!-- main content -->
-    <section>
+      <!-- main content -->
+      <section>
         <!-- welcome -->
         <div class="border p-3 border-dark m-3 text-center bg-orange">
           <h3>Selamat Datang di Aplikasi Parkir STT-NF</h3>
-          <p>SIPAK adalah aplikasi inovatif yang mempermudah pengguna dalam mencari dan mengelola parkir kendaraan. Dengan fitur pencarian real-time, notifikasi waktu parkir, serta manajemen riwayat, SIPAK memberikan pengalaman yang efisien dan praktis. Dengan SIPAK, parkir di kampus menjadi lebih teratur dan sesuai dengan tuntutan gaya hidup modern di lingkungan pendidikan.</p>
-          <a class="btn btn-primary" href="#" role="button">Daftar Kendaraan Anda</a> 
+          <p>
+            SIPAK adalah aplikasi inovatif yang mempermudah pengguna dalam
+            mencari dan mengelola parkir kendaraan. Dengan fitur pencarian
+            real-time, notifikasi waktu parkir, serta manajemen riwayat, SIPAK
+            memberikan pengalaman yang efisien dan praktis. Dengan SIPAK, parkir
+            di kampus menjadi lebih teratur dan sesuai dengan tuntutan gaya
+            hidup modern di lingkungan pendidikan.
+          </p>
+          <a class="btn btn-primary" href="#" role="button"
+            >Daftar Kendaraan Anda</a
+          >
         </div>
 
         <!-- Profile -->
         <div class="text-center mt-3">
           <h2>Profil Kampus STT-NF</h2>
           <div class="gambar d-flex justify-content-center flex-wrap">
-              <img src="assets/img/STTNF-A.png" alt="STT_NF_A" class="m-3 img-fluid" style="width: 250px;">
-              <img src="assets/img/STTNF.jpg" alt="STT_NF" class="m-3 img-fluid" style="width: 250px;">
-              <img src="assets/img/STTNF-B.jpg" alt="STT_NF_B" class="m-3 img-fluid" style="width: 250px;">
-              <img src="assets/img/STTNF2.jpg" alt="STT_NF_2" class="m-3 img-fluid" style="width: 250px;">
+            <img
+              src="assets/img/STTNF-A.png"
+              alt="STT_NF_A"
+              class="m-3 img-fluid"
+              style="width: 250px"
+            />
+            <img
+              src="assets/img/STTNF.jpg"
+              alt="STT_NF"
+              class="m-3 img-fluid"
+              style="width: 250px"
+            />
+            <img
+              src="assets/img/STTNF-B.jpg"
+              alt="STT_NF_B"
+              class="m-3 img-fluid"
+              style="width: 250px"
+            />
+            <img
+              src="assets/img/STTNF2.jpg"
+              alt="STT_NF_2"
+              class="m-3 img-fluid"
+              style="width: 250px"
+            />
           </div>
         </div>
 
-      <!-- Berita -->
-      <div class="text-center mt-3 bg-primary" id="berita">
-        <h2 class="pt-3">Berita Kampus</h2>
-        <div class="berita d-flex justify-content-center">
+        <!-- Berita -->
+        <div class="text-center mt-3 bg-primary" id="berita">
+          <h2 class="pt-3">Berita Kampus</h2>
+          <div class="berita d-flex justify-content-center">
             <div class="mx-3 mt-2">
-                <h5><b>Kemudahan Parkir di Ujung Jari</b></h5>
-                <p>SIPAK adalah solusi pintar untuk masalah parkir di Kampus. Dengan fitur pencarian real-time dan notifikasi waktu parkir, SIPAK membantu pengguna mengelola parkir kendaraan dengan mudah dan efisien. Dengan SIPAK, parkir di Kampus bukan lagi hambatan, melainkan pengalaman yang lancar dan nyaman.</p>
+              <h5><b>Kemudahan Parkir di Ujung Jari</b></h5>
+              <p>
+                SIPAK adalah solusi pintar untuk masalah parkir di Kampus.
+                Dengan fitur pencarian real-time dan notifikasi waktu parkir,
+                SIPAK membantu pengguna mengelola parkir kendaraan dengan mudah
+                dan efisien. Dengan SIPAK, parkir di Kampus bukan lagi hambatan,
+                melainkan pengalaman yang lancar dan nyaman.
+              </p>
             </div>
             <div class="mx-3 mt-2">
-                <h5><b>Kejutan bagi Pengguna Baru</b></h5>
-                <p>Admin SIPAK memberikan kejutan untuk pengguna baru! Cukup daftar dan gunakan aplikasi, dan dapatkan kejutan menarik. Dengan SIPAK, parkir jadi lebih praktis dan menyenangkan. Jangan lewatkan kesempatan ini, Daftar Sekarang!!!</p>
+              <h5><b>Kejutan bagi Pengguna Baru</b></h5>
+              <p>
+                Admin SIPAK memberikan kejutan untuk pengguna baru! Cukup daftar
+                dan gunakan aplikasi, dan dapatkan kejutan menarik. Dengan
+                SIPAK, parkir jadi lebih praktis dan menyenangkan. Jangan
+                lewatkan kesempatan ini, Daftar Sekarang!!!
+              </p>
             </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Main Footer -->
-    <footer class="main-footer bg-dark">
-      <!-- To the right -->
-      <div class="float-right d-none d-sm-inline">
+      <!-- Main Footer -->
+      <footer class="main-footer bg-dark">
+        <!-- To the right -->
+        <div class="float-right d-none d-sm-inline">
           <ul class="d-flex nav">
-              <li>
-                <a href="#"><i class="bi bi-instagram m-1"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="bi bi-github m-1"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="bi bi-linkedin m-1"></i></a>
-              </li>
-            </ul>
-      </div>
-      <!-- Default to the left -->
-      <strong>Copyright &copy; 2023 <span><a href="https://nurulfikri.ac.id/">STT Terpadu Nurul FIkri</a></span>.</strong> All rights reserved.
-    </footer>
-  </div>
-<!-- ./wrapper -->
+            <li>
+              <a href="#"><i class="bi bi-instagram m-1"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-github m-1"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-linkedin m-1"></i></a>
+            </li>
+          </ul>
+        </div>
+        <!-- Default to the left -->
+        <strong
+          >Copyright &copy; 2023
+          <span
+            ><a href="https://nurulfikri.ac.id/"
+              >STT Terpadu Nurul FIkri</a
+            ></span
+          >.</strong
+        >
+        All rights reserved.
+      </footer>
+    </div>
+    <!-- ./wrapper -->
 
-<!-- REQUIRED SCRIPTS -->
+    <!-- REQUIRED SCRIPTS -->
 
-<!-- jQuery -->
-<script src="assets/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="assets/js/adminlte.min.js"></script>
-</body>
+    <!-- jQuery -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="assets/js/adminlte.min.js"></script>
+  </body>
 </html>
