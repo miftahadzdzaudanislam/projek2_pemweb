@@ -1,4 +1,7 @@
 function log(){
+    const username = 'sipaksttnf'
+    const password = 'sipak123'
+
     let user = document.getElementById('username').value;
     let pass = document.getElementById('password').value;
 
@@ -11,9 +14,14 @@ function log(){
     if (user == ''){
         erroruser = 'Isi Username Anda';
         document.getElementById('username').style.borderColor = 'red'
-    }if (pass == ''){
+    }else if (pass == ''){
         errorpass = 'Isi Password Anda';
         document.getElementById('password').style.borderColor = 'red';
+    }else if (user == username && pass == password){
+        alert('Login Berhasil')
+        document.location = 'dashboard.html'
+    }else {
+        alert('Username atau Password salah')
     }
 
     document.getElementById('erroruser').innerHTML = erroruser;
@@ -51,11 +59,13 @@ function pulih(){
     if (passbaru == ''){
         errorbaru = 'Isi Password Baru';
         document.getElementById('baru').style.borderColor = 'red';
-    }if (konvpass == ''){
+    }else if (konvpass == ''){
         errorkonv = 'Konvirmasi Password Baru'
         document.getElementById('konvirmasi').style.borderColor = 'red';
+    }else if (konvpass == passbaru){
+        document.location = 'login.html'
     }else if (konvpass != passbaru){
-        errorbaru = 'Harus Sama dengan Password Baru';
+        errorkonv = 'Harus Sama Dengan Password Baru'
         document.getElementById('konvirmasi').style.borderColor = 'red';
     }
 
