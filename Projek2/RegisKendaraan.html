@@ -4,6 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Registrasi Kendaraan | SIPAK</title>
+    <link rel="icon" href="assets/img/SIPAK.png">
+
+    <style>
+      .error{
+        color: red;
+      }
+    </style>
 
     <!-- Google Font: Source Sans Pro -->
     <link
@@ -27,13 +34,14 @@
       <!-- Navbar -->
       <nav
         class="main-header navbar navbar-expand-md navbar-light navbar-white sticky-top"
+        style="background: linear-gradient(45deg, #f86e29, #a1acf7);"
       >
         <div class="container">
           <a href="index.html" class="navbar-brand">
             <img
-              src="assets/img/AdminLTELogo.png"
+              src="assets/img/SIPAK.png"
               alt="SIPAK Logo"
-              class="brand-image img-circle elevation-3"
+              class="brand-image img-circle elevation-3 bg-yellow"
               style="opacity: 0.8"
             />
             <span class="brand-text font-weight-light">SIPAK STT-NF</span>
@@ -55,10 +63,10 @@
             <!-- Left navbar links -->
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a href="#" class="nav-link">Home</a>
+                <a href="index.html" class="nav-link">Home</a>
               </li>
               <li class="nav-item">
-                <a href="#berita" class="nav-link">Berita</a>
+                <a href="index.html" class="nav-link">Berita</a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">Registrasi Kendaraan</a>
@@ -83,7 +91,7 @@
               <h3>Registrasi Kendaraan</h3>
             </div>
             <div class="card-body">
-              <form action="areaparkir.html" method="post">
+              <form action="index.html" method="post">
                 <div class="row form-group">
                   <div class="col-sm-4">
                     <label>Status</label>
@@ -113,7 +121,6 @@
                     >
                   </div>
                 </div>
-                <span class="error mt-0" id="errorNIM"></span>
                 <div class="form-group">
                   <label for="NIM">NIM/NIDN</label>
                   <input
@@ -124,6 +131,8 @@
                     required
                   />
                 </div>
+                <span class="error mt-0" id="errorNIM"></span>
+
                 <div class="form-group">
                   <label for="Nama">Nama Lengkap</label>
                   <input
@@ -134,6 +143,8 @@
                     required
                   />
                 </div>
+                <span class="error mt-0" id="errorNama"></span>
+
                 <div class="form-group">
                   <label>Prodi</label>
                   <select class="custom-select" required>
@@ -181,6 +192,8 @@
                     required
                   />
                 </div>
+                <span class="error mt-0" id="errorNopol"></span>
+
                 <div class="form-group">
                   <label for="NIM">Merek</label>
                   <input
@@ -191,6 +204,8 @@
                     required
                   />
                 </div>
+                <span class="error mt-0" id="errorMerek"></span>
+
                 <div class="form-group">
                   <label for="custom-file-input">Upload STNK</label>
                   <div class="input-group">
@@ -219,23 +234,25 @@
       <!-- /.register-box -->
 
       <!-- Main Footer -->
-      <footer class="main-footer">
+      <footer class="main-footer bg-dark">
         <!-- To the right -->
-        <div class="float-right d-none d-sm-inline">
-          <ul class="d-flex nav">
-            <li>
-              <a href="#"><i class="bi bi-instagram m-1"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="bi bi-github m-1"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="bi bi-linkedin m-1"></i></a>
-            </li>
-          </ul>
+        <div class="float-md-right">
+            <ul class="d-flex nav justify-content-center text-center">
+                <li>
+                  <a href="#"><i class="bi bi-instagram m-1"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-github m-1"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-linkedin m-1"></i></a>
+                </li>
+              </ul>
         </div>
         <!-- Default to the left -->
-        <strong>Copyright &copy; 2023.</strong> All rights reserved.
+          <p class="text-center text-md-left m-0">
+            <strong>Copyright &copy; 2023 <span><a href="index.html">SIPAK STT Nurul Fikri</a></span>.</strong> All rights reserved.
+          </p>
       </footer>
     </div>
     <!-- ./wrapper -->
@@ -247,59 +264,6 @@
     <!-- Bootstrap 4 -->
     <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
-    <script></script>
-    <script src="assets/js/kendaraan.js">
-      function reg() {
-              let NIM = document.getElementById("NIM").value;
-              let Nama = document.getElementById("Nama").value;
-              let NoPol = document.getElementById("NoPol").value;
-              let Merek = document.getElementById("Merek").value;
-
-              document.getElementById("NIM").style.borderColor = "";
-              document.getElementById("Nama").style.borderColor = "";
-              document.getElementById("NoPol").style.borderColor = "";
-              document.getElementById("Merek").style.borderColor = "";
-
-              let errorNIM = "";
-              let errorasal = "";
-              let errorNoPol = "";
-              let errorMerek = "";
-
-              if (NIM == "") {
-                errorNIM = "Isi NIM Anda";
-                document.getElementById("NIM").style.borderColor = "red";
-              }
-              if (Nama == "") {
-                errorasal = "Isi Nama Lengkap Anda";
-                document.getElementById("asal").style.borderColor = "red";
-              }
-              if (NoPol == "") {
-                errorNoPol = "Isi NoPol Anda";
-                document.getElementById("NoPol").style.borderColor = "red";
-              }
-              if (Merek == "") {
-                errorMerek = "Isi Merek kendaraan Anda";
-                document.getElementById("Merek").style.borderColor = "red";
-              }
-
-              document.getElementById("errorNIM").innerHTML = errorNIM;
-              document.getElementById("errorasal").innerHTML = errorasal;
-              document.getElementById("erroruser").innerHTML = erroruser;
-              document.getElementById("errorpass").innerHTML = errorpass;
-              document.getElementById("errorcpass").innerHTML = errorcpass;
-            }
-    </script>
-    <script>
-      function displayFileName() {
-        // Mengambil elemen input file
-        var fileInput = document.getElementById("file");
-
-        // Mengambil nama file yang dipilih
-        var fileName = fileInput.files[0].name;
-
-        // Menampilkan nama file (contoh: bisa menggunakan alert atau menambahkannya ke elemen HTML)
-        alert("File selected: " + fileName);
-      }
-    </script>
+    <script src="assets/js/kendaraan.js"></script>   
   </body>
 </html>

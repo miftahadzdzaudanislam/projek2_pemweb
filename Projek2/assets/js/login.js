@@ -65,7 +65,7 @@ function pulih(){
     }else if (konvpass == passbaru){
         document.location = 'login.html'
     }else if (konvpass != passbaru){
-        errorkonv = 'Harus Sama Dengan Password Baru'
+        errorkonv = 'Password Tidak Cocok'
         document.getElementById('konvirmasi').style.borderColor = 'red';
     }
 

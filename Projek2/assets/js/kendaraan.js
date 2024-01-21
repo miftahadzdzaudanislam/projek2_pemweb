@@ -1,16 +1,16 @@
 function reg() {
   let NIM = document.getElementById("NIM").value;
   let Nama = document.getElementById("Nama").value;
-  let NoPol = document.getElementById("NoPol").value;
+  let NoPol = document.getElementById("Nopol").value;
   let Merek = document.getElementById("Merek").value;
 
   document.getElementById("NIM").style.borderColor = "";
   document.getElementById("Nama").style.borderColor = "";
-  document.getElementById("NoPol").style.borderColor = "";
+  document.getElementById("Nopol").style.borderColor = "";
   document.getElementById("Merek").style.borderColor = "";
 
   let errorNIM = "";
-  let errorasal = "";
+  let errorNama = "";
   let errorNoPol = "";
   let errorMerek = "";
 
@@ -19,12 +19,12 @@ function reg() {
     document.getElementById("NIM").style.borderColor = "red";
   }
   if (Nama == "") {
-    errorasal = "Isi Nama Lengkap Anda";
-    document.getElementById("asal").style.borderColor = "red";
+    errorNama = "Isi Nama Lengkap Anda";
+    document.getElementById("Nama").style.borderColor = "red";
   }
   if (NoPol == "") {
     errorNoPol = "Isi NoPol Anda";
-    document.getElementById("NoPol").style.borderColor = "red";
+    document.getElementById("Nopol").style.borderColor = "red";
   }
   if (Merek == "") {
     errorMerek = "Isi Merek kendaraan Anda";
@@ -32,8 +32,7 @@ function reg() {
   }
 
   document.getElementById("errorNIM").innerHTML = errorNIM;
-  document.getElementById("errorasal").innerHTML = errorasal;
-  document.getElementById("erroruser").innerHTML = erroruser;
-  document.getElementById("errorpass").innerHTML = errorpass;
-  document.getElementById("errorcpass").innerHTML = errorcpass;
+  document.getElementById("errorNama").innerHTML = errorNama;
+  document.getElementById("errorNopol").innerHTML = errorNoPol;
+  document.getElementById("errorMerek").innerHTML = errorMerek;
 }

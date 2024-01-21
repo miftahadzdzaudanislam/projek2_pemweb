@@ -33,10 +33,11 @@ function reg() {
     errorpass = "Isi Password Anda";
     document.getElementById("password").style.borderColor = "red";
   }
-  if (cpass == "") {
-    errorcpass = "Isi Cek Password Anda";
+  if (cpass != pass) {
+    errorcpass = "Password Tidak Cocok";
     document.getElementById("cpassword").style.borderColor = "red";
   }
+
   document.getElementById("errornama").innerHTML = errornama;
   document.getElementById("errorasal").innerHTML = errorasal;
   document.getElementById("erroruser").innerHTML = erroruser;
