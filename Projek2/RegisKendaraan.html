@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Registrasi User | SIPAK</title>
+    <title>Registrasi Kendaraan | SIPAK</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link
@@ -77,14 +77,12 @@
         <section class="content-header">
           <!-- /.container-fluid -->
         </section>
-        <div class="container-fluid">
+        <div>
           <div class="card card-outline card-primary mx-auto my-5 col-sm-6">
             <div class="card-header text-center">
-              <h1><b>SIPAK</b></h1>
+              <h3>Registrasi Kendaraan</h3>
             </div>
             <div class="card-body">
-              <p class="login-box-msg">Registrasi Kendaraan</p>
-
               <form action="areaparkir.html" method="post">
                 <div class="row form-group">
                   <div class="col-sm-4">
@@ -125,7 +123,6 @@
                     placeholder="NIM/NIDN"
                     required
                   />
-                  <span class="error mt-0" id="errorNIM"></span>
                 </div>
                 <div class="form-group">
                   <label for="Nama">Nama Lengkap</label>
@@ -195,13 +192,10 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputFile">Upload STNK</label>
+                  <label for="custom-file-input">Upload STNK</label>
                   <div class="input-group">
                     <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="file" />
-                      <label class="custom-file-label" for="customFile"
-                        >Choose file</label
-                      >
+                      <input type="file" id="file" />
                     </div>
                   </div>
                 </div>
@@ -253,7 +247,59 @@
     <!-- Bootstrap 4 -->
     <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="assets/js/adminlte.min.js"></script>
-    <script src="assets/js/kendaraan.js"></script>
+    <script></script>
+    <script src="assets/js/kendaraan.js">
+      function reg() {
+              let NIM = document.getElementById("NIM").value;
+              let Nama = document.getElementById("Nama").value;
+              let NoPol = document.getElementById("NoPol").value;
+              let Merek = document.getElementById("Merek").value;
+
+              document.getElementById("NIM").style.borderColor = "";
+              document.getElementById("Nama").style.borderColor = "";
+              document.getElementById("NoPol").style.borderColor = "";
+              document.getElementById("Merek").style.borderColor = "";
+
+              let errorNIM = "";
+              let errorasal = "";
+              let errorNoPol = "";
+              let errorMerek = "";
+
+              if (NIM == "") {
+                errorNIM = "Isi NIM Anda";
+                document.getElementById("NIM").style.borderColor = "red";
+              }
+              if (Nama == "") {
+                errorasal = "Isi Nama Lengkap Anda";
+                document.getElementById("asal").style.borderColor = "red";
+              }
+              if (NoPol == "") {
+                errorNoPol = "Isi NoPol Anda";
+                document.getElementById("NoPol").style.borderColor = "red";
+              }
+              if (Merek == "") {
+                errorMerek = "Isi Merek kendaraan Anda";
+                document.getElementById("Merek").style.borderColor = "red";
+              }
+
+              document.getElementById("errorNIM").innerHTML = errorNIM;
+              document.getElementById("errorasal").innerHTML = errorasal;
+              document.getElementById("erroruser").innerHTML = erroruser;
+              document.getElementById("errorpass").innerHTML = errorpass;
+              document.getElementById("errorcpass").innerHTML = errorcpass;
+            }
+    </script>
+    <script>
+      function displayFileName() {
+        // Mengambil elemen input file
+        var fileInput = document.getElementById("file");
+
+        // Mengambil nama file yang dipilih
+        var fileName = fileInput.files[0].name;
+
+        // Menampilkan nama file (contoh: bisa menggunakan alert atau menambahkannya ke elemen HTML)
+        alert("File selected: " + fileName);
+      }
+    </script>
   </body>
 </html>

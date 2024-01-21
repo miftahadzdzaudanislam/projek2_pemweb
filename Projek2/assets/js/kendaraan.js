@@ -15,11 +15,11 @@ function reg() {
   let errorMerek = "";
 
   if (NIM == "") {
-    errorNIM = "Isi Nama Lengkap Anda";
+    errorNIM = "Isi NIM Anda";
     document.getElementById("NIM").style.borderColor = "red";
   }
   if (Nama == "") {
-    errorasal = "Isi Asal Prodi Anda";
+    errorasal = "Isi Nama Lengkap Anda";
     document.getElementById("asal").style.borderColor = "red";
   }
   if (NoPol == "") {
